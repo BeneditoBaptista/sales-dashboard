@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "frontend",
+      "runtimeExecutable": "/Users/bennymanuel/.nvm/versions/node/v22.21.1/bin/node",
+      "runtimeArgs": ["frontend/node_modules/vite/bin/vite.js", "frontend", "--port", "5199", "--strictPort"],
+      "port": 5199,
+      "autoPort": false
+    }
+  ]
+}

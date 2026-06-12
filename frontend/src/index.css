@@ -1,0 +1,190 @@
+:root {
+    --bg: #0f1419;
+    --surface: #1a2129;
+    --surface-2: #222b35;
+    --border: #2c3742;
+    --text: #e6edf3;
+    --text-muted: #8b98a5;
+    --accent: #38bdf8;
+    --accent-2: #2dd4bf;
+    --accent-3: #fbbf24;
+    --danger: #f87171;
+
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    color-scheme: dark;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* ---- Filtros ---- */
+
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+}
+
+.filter-bar label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.filter-bar select {
+    background: var(--surface-2);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 7px 10px;
+    min-width: 140px;
+    font-size: 0.9rem;
+}
+
+/* ---- Botões ---- */
+
+button {
+    background: var(--surface-2);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.btn-clear {
+    color: var(--danger);
+}
+
+.export-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* ---- KPIs ---- */
+
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.kpi-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+}
+
+.kpi-card h4 {
+    margin: 0 0 8px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.kpi-card h2 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+/* ---- Gráficos ---- */
+
+.chart-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.chart-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+}
+
+.chart-card h2 {
+    margin: 0 0 14px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* ---- Estados ---- */
+
+.loading-state,
+.error-state {
+    text-align: center;
+    padding: 80px 0;
+    color: var(--text-muted);
+}
+
+/* ---- Responsivo ---- */
+
+@media (max-width: 900px) {
+    .kpi-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .chart-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+    .kpi-grid {
+        grid-template-columns: 1fr;
+    }
+}
