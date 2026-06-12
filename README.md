@@ -84,7 +84,6 @@ Ferramentas de IA foram utilizadas como assistente, nomeadamente para:
 •	Apoiar na estruturação do backend e frontend
 •	Melhorar documentação e clareza do código
 
-Todo o código foi revisto, compreendido e ajustado pelo aluno.
 
 ⸻
 
@@ -100,8 +99,7 @@ cd frontend
 npm install
 npm run dev
 
-	•	Backend: http://localhost:3006
-	•	Frontend: http://localhost:5173
+	
 
 ⸻
 
@@ -110,5 +108,4 @@ npm run dev
     •	Integração com dados reais
 
 
-# sales-dashboard
-# sales-dashboard
+
